@@ -3,8 +3,11 @@
       <a href="https://www.google.com" class="topbarlink">one</a>
       <a href="https://www.google.com" class="topbarlink">two</a>
       <a href="https://www.google.com" class="topbarlink">three</a>  
-
-      <a {{ if (eq .File.LogicalName "_index.md") }}style="pointer-events:none; color: #dddddd;"{{ end }} id="column-toggler" href="#" class="page-nav-buttons topbarlink"><i class="fa fa-eye" aria-hidden="true"></i></a>
+      <a {{ if (eq .File.LogicalName "_index.md") }} style="pointer-events:none; color: #dddddd;"{{ end }} id="column-toggler" href="#" class="page-nav-buttons topbarlink">
+        {{ if .Params.code }}
+          <i class="fa fa-eye" aria-hidden="true"></i>
+        {{ end }}
+      </a>
       {{ $currentNode := . }}
 
       {{ template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode }}

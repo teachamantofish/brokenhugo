@@ -1,13 +1,13 @@
 comment = "#"
 
-baseURL = 'https://git.corp.adobe.com/pages/brogers/hugotest/docs/'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "hugo-theme-learn" 
 sectionPagesMenu = "main"
 pluralizelisttitles = "false"
 enableGitInfo = true
-
+relativeURLs = true
 [frontmatter]
 date = ["date", "publishDate", "lastmod"]
 lastmod = ["lastmod", ":git", "date", "publishDate"]
