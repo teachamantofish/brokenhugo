@@ -1,5 +1,4 @@
 :root{
-
     --FIXED-HEADER-BG-color: lightgray; /* Color of links */
     --SIDEBAR-SEARCHBOX-BG-color: #AEAEAE;
     --SIDEBAR-SEARCHBOX-INPUT-color: #222; 
@@ -83,11 +82,13 @@ a:hover {
     flex-shrink: 0;
     flex-basis: auto;
     align-self: auto;
-    background-color: var(--MEDIUM-GREY) !important;
     width: 50%;
   }
 
-#body .padding {padding:0 0 0 4rem; }
+#code-column {
+    background-color: #ddd;
+}
+
 #body {
     padding-top: 55px;
 }
@@ -405,6 +406,7 @@ div.table-of-contents #TableOfContents > ul > li > a {
     padding: 17px 20px 20px; 
  }
  
+ 
  .fixedbar .wy-menu-items a:hover {
     background: var(--VERY-LIGHT-GREY);   
  }
@@ -422,7 +424,6 @@ div.table-of-contents #TableOfContents > ul > li > a {
  }
 
  .fixedbar {
-    background: var(--MEDIUM-GREY);
     padding: 0;
     margin-top: 0;
     height: 55px;
@@ -431,6 +432,7 @@ div.table-of-contents #TableOfContents > ul > li > a {
     width: calc(100% - var(--NAVBAR-width));
     margin-left: var(--NAVBAR-width);
     z-index: 9;
+    background-color: white;
  }
 
  #top-bar {
@@ -565,27 +567,23 @@ div.table-of-contents #TableOfContents > ul > li > a {
  }
 
  @media only all and (max-width: 45.8em) {
+    .fixedbar {
+        width: 100%;
+        margin-left: 0;
+
+
+    }
     #sidebar {
         display:none;
-    }
-    #body {
-        margin-left: 230px;
-    }
-}
-@media only all and (max-width: 45.8em) {
-    #sidebar {
         width: 230px;
         left: -230px;
     }
     #body {
-        margin-left: 0;
+       margin-left: 0;
         width: 100%;
     }
     .sidebar-hidden {
         overflow: hidden;
-    }
-    .sidebar-hidden #sidebar {
-        left: 0;
     }
     .sidebar-hidden #body {
         margin-left: 230px;
